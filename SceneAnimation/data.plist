@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>sceneData</key>
+	<dict>
+		<key>content</key>
+		<dict>
+			<key>backImg</key>
+			<dict>
+				<key>height</key>
+				<integer>102</integer>
+				<key>url</key>
+				<string>http://img.ma.social-touch.com/m/100/546x102-702d2e0c29e57b338d46524f77ea5f8a.png</string>
+				<key>width</key>
+				<integer>546</integer>
+			</dict>
+			<key>carImg</key>
+			<dict>
+				<key>height</key>
+				<integer>129</integer>
+				<key>url</key>
+				<string>http://img.ma.social-touch.com/m/100/471x129-c5d3ba75dadc346fcb1e260b4003893c.png</string>
+				<key>width</key>
+				<integer>471</integer>
+			</dict>
+			<key>logoImg</key>
+			<dict>
+				<key>height</key>
+				<integer>87</integer>
+				<key>url</key>
+				<string>http://img.ma.social-touch.com/m/100/87x87-b1a05d55a750863924c101b4f854b33a.png</string>
+				<key>width</key>
+				<integer>87</integer>
+			</dict>
+			<key>textColor</key>
+			<string>FFFFFF</string>
+			<key>textWriter</key>
+			<string>福特野马，释放真自我</string>
+			<key>wheelImg</key>
+			<dict>
+				<key>height</key>
+				<integer>72</integer>
+				<key>url</key>
+				<string>http://img.ma.social-touch.com/m/100/72x72-1463621b887309cbd359c7aca7734cea.png</string>
+				<key>width</key>
+				<integer>72</integer>
+			</dict>
+			<key>xAxis1</key>
+			<integer>42</integer>
+			<key>xAxis2</key>
+			<integer>330</integer>
+			<key>yAxis1</key>
+			<integer>75</integer>
+			<key>yAxis2</key>
+			<integer>75</integer>
+		</dict>
+		<key>style_id</key>
+		<integer>2001</integer>
+	</dict>
+</dict>
+</plist>
