@@ -26,16 +26,9 @@
     NSLog(@"prepare in sub thread");
 }
 - (void)animationDidStart:(CAAnimation *)anim {
-    [self jsAnimationDidStart:anim];
 }
 
 - (void)animationDidStop:(CAAnimation *)anim finished:(BOOL)flag {
-    [self jsAnimationDidStop:anim finished:flag];
-}
-- (void)jsAnimationDidStart:(CAAnimation *)anim {
-    
-}
-- (void)jsAnimationDidStop:(CAAnimation *)anim finished:(BOOL)flag {
 }
 
 - (CGFloat)atan2f:(CGFloat)x y:(CGFloat)y {
