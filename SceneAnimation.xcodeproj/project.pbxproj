@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		3C35D0511D12A2EE0089D662 /* 1.js in Resources */ = {isa = PBXBuildFile; fileRef = 3C35D0501D12A2EE0089D662 /* 1.js */; };
+		3C35D0541D12A4DB0089D662 /* STSceneAdPlayer.m in Sources */ = {isa = PBXBuildFile; fileRef = 3C35D0531D12A4DB0089D662 /* STSceneAdPlayer.m */; };
 		3C392FBB1D0241A70090FA65 /* JPEngine.m in Sources */ = {isa = PBXBuildFile; fileRef = 3C392FB91D0241A70090FA65 /* JPEngine.m */; };
 		3C392FBC1D0241A70090FA65 /* JSPatch.js in Resources */ = {isa = PBXBuildFile; fileRef = 3C392FBA1D0241A70090FA65 /* JSPatch.js */; };
 		3C392FBF1D0243020090FA65 /* STAnimationService.m in Sources */ = {isa = PBXBuildFile; fileRef = 3C392FBE1D0243020090FA65 /* STAnimationService.m */; };
@@ -16,6 +18,8 @@
 		3C392FCA1D0263270090FA65 /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3C392FC91D0263270090FA65 /* QuartzCore.framework */; };
 		3C392FCC1D02632C0090FA65 /* JavaScriptCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3C392FCB1D02632C0090FA65 /* JavaScriptCore.framework */; };
 		3C40C7701D0269D40086B729 /* data.plist in Resources */ = {isa = PBXBuildFile; fileRef = 3C40C76F1D0269D40086B729 /* data.plist */; };
+		3C6DEAD21D2BD9A300B5EE26 /* STJPEngine.m in Sources */ = {isa = PBXBuildFile; fileRef = 3C6DEAD11D2BD9A300B5EE26 /* STJPEngine.m */; };
+		3C92DCAB1D13F39900B17F8C /* STCarSceneAdPlayer.m in Sources */ = {isa = PBXBuildFile; fileRef = 3C92DCAA1D13F39900B17F8C /* STCarSceneAdPlayer.m */; };
 		3CFB80541D01683F00646D6A /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 3CFB80531D01683F00646D6A /* main.m */; };
 		3CFB80571D01683F00646D6A /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 3CFB80561D01683F00646D6A /* AppDelegate.m */; };
 		3CFB805A1D01683F00646D6A /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3CFB80591D01683F00646D6A /* ViewController.m */; };
@@ -25,14 +29,15 @@
 		3CFB80711D0168DF00646D6A /* HeaderView.m in Sources */ = {isa = PBXBuildFile; fileRef = 3CFB80701D0168DF00646D6A /* HeaderView.m */; };
 		3CFB80741D01699A00646D6A /* ContainerViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3CFB80731D01699A00646D6A /* ContainerViewController.m */; };
 		3CFB80771D0169D000646D6A /* PlayViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3CFB80761D0169D000646D6A /* PlayViewController.m */; };
-		3CFB80811D016D8100646D6A /* STCarSceneAdPlayer.m in Sources */ = {isa = PBXBuildFile; fileRef = 3CFB80791D016D8100646D6A /* STCarSceneAdPlayer.m */; };
 		3CFB80821D016D8100646D6A /* STJPFrameExtension.m in Sources */ = {isa = PBXBuildFile; fileRef = 3CFB807B1D016D8100646D6A /* STJPFrameExtension.m */; };
-		3CFB80831D016D8100646D6A /* STSceneAdPlayer.m in Sources */ = {isa = PBXBuildFile; fileRef = 3CFB807E1D016D8100646D6A /* STSceneAdPlayer.m */; };
 		3CFB80841D016D8100646D6A /* STTimeMeter.m in Sources */ = {isa = PBXBuildFile; fileRef = 3CFB80801D016D8100646D6A /* STTimeMeter.m */; };
 		3CFB80871D01706300646D6A /* STUtils.m in Sources */ = {isa = PBXBuildFile; fileRef = 3CFB80861D01706300646D6A /* STUtils.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		3C35D0501D12A2EE0089D662 /* 1.js */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.javascript; name = 1.js; path = ../1.js; sourceTree = "<group>"; };
+		3C35D0521D12A4DB0089D662 /* STSceneAdPlayer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = STSceneAdPlayer.h; sourceTree = "<group>"; };
+		3C35D0531D12A4DB0089D662 /* STSceneAdPlayer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = STSceneAdPlayer.m; sourceTree = "<group>"; };
 		3C392FB81D0241A70090FA65 /* JPEngine.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JPEngine.h; sourceTree = "<group>"; };
 		3C392FB91D0241A70090FA65 /* JPEngine.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JPEngine.m; sourceTree = "<group>"; };
 		3C392FBA1D0241A70090FA65 /* JSPatch.js */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.javascript; path = JSPatch.js; sourceTree = "<group>"; };
@@ -45,6 +50,10 @@
 		3C392FC91D0263270090FA65 /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
 		3C392FCB1D02632C0090FA65 /* JavaScriptCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = JavaScriptCore.framework; path = System/Library/Frameworks/JavaScriptCore.framework; sourceTree = SDKROOT; };
 		3C40C76F1D0269D40086B729 /* data.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = data.plist; sourceTree = "<group>"; };
+		3C6DEAD01D2BD9A300B5EE26 /* STJPEngine.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = STJPEngine.h; sourceTree = "<group>"; };
+		3C6DEAD11D2BD9A300B5EE26 /* STJPEngine.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = STJPEngine.m; sourceTree = "<group>"; };
+		3C92DCA91D13F39900B17F8C /* STCarSceneAdPlayer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = STCarSceneAdPlayer.h; sourceTree = "<group>"; };
+		3C92DCAA1D13F39900B17F8C /* STCarSceneAdPlayer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = STCarSceneAdPlayer.m; sourceTree = "<group>"; };
 		3CFB804F1D01683F00646D6A /* SceneAnimation.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SceneAnimation.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		3CFB80531D01683F00646D6A /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		3CFB80551D01683F00646D6A /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -61,13 +70,9 @@
 		3CFB80731D01699A00646D6A /* ContainerViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ContainerViewController.m; sourceTree = "<group>"; };
 		3CFB80751D0169D000646D6A /* PlayViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PlayViewController.h; sourceTree = "<group>"; };
 		3CFB80761D0169D000646D6A /* PlayViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PlayViewController.m; sourceTree = "<group>"; };
-		3CFB80781D016D8000646D6A /* STCarSceneAdPlayer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = STCarSceneAdPlayer.h; sourceTree = "<group>"; };
-		3CFB80791D016D8100646D6A /* STCarSceneAdPlayer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = STCarSceneAdPlayer.m; sourceTree = "<group>"; };
 		3CFB807A1D016D8100646D6A /* STJPFrameExtension.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = STJPFrameExtension.h; sourceTree = "<group>"; };
 		3CFB807B1D016D8100646D6A /* STJPFrameExtension.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = STJPFrameExtension.m; sourceTree = "<group>"; };
 		3CFB807C1D016D8100646D6A /* STSceneAdCallback.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = STSceneAdCallback.h; sourceTree = "<group>"; };
-		3CFB807D1D016D8100646D6A /* STSceneAdPlayer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = STSceneAdPlayer.h; sourceTree = "<group>"; };
-		3CFB807E1D016D8100646D6A /* STSceneAdPlayer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = STSceneAdPlayer.m; sourceTree = "<group>"; };
 		3CFB807F1D016D8100646D6A /* STTimeMeter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = STTimeMeter.h; sourceTree = "<group>"; };
 		3CFB80801D016D8100646D6A /* STTimeMeter.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = STTimeMeter.m; sourceTree = "<group>"; };
 		3CFB80851D01706300646D6A /* STUtils.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = STUtils.h; sourceTree = "<group>"; };
@@ -110,6 +115,13 @@
 		3CFB80511D01683F00646D6A /* SceneAnimation */ = {
 			isa = PBXGroup;
 			children = (
+				3C6DEAD01D2BD9A300B5EE26 /* STJPEngine.h */,
+				3C6DEAD11D2BD9A300B5EE26 /* STJPEngine.m */,
+				3C92DCA91D13F39900B17F8C /* STCarSceneAdPlayer.h */,
+				3C92DCAA1D13F39900B17F8C /* STCarSceneAdPlayer.m */,
+				3C35D0521D12A4DB0089D662 /* STSceneAdPlayer.h */,
+				3C35D0531D12A4DB0089D662 /* STSceneAdPlayer.m */,
+				3C35D0501D12A2EE0089D662 /* 1.js */,
 				3C40C76F1D0269D40086B729 /* data.plist */,
 				3C392FC31D0250610090FA65 /* carAnimaiton.js */,
 				3C392FC01D0244C40090FA65 /* STAnimation.h */,
@@ -121,13 +133,9 @@
 				3C392FBA1D0241A70090FA65 /* JSPatch.js */,
 				3CFB80851D01706300646D6A /* STUtils.h */,
 				3CFB80861D01706300646D6A /* STUtils.m */,
-				3CFB80781D016D8000646D6A /* STCarSceneAdPlayer.h */,
-				3CFB80791D016D8100646D6A /* STCarSceneAdPlayer.m */,
 				3CFB807A1D016D8100646D6A /* STJPFrameExtension.h */,
 				3CFB807B1D016D8100646D6A /* STJPFrameExtension.m */,
 				3CFB807C1D016D8100646D6A /* STSceneAdCallback.h */,
-				3CFB807D1D016D8100646D6A /* STSceneAdPlayer.h */,
-				3CFB807E1D016D8100646D6A /* STSceneAdPlayer.m */,
 				3CFB807F1D016D8100646D6A /* STTimeMeter.h */,
 				3CFB80801D016D8100646D6A /* STTimeMeter.m */,
 				3CFB80751D0169D000646D6A /* PlayViewController.h */,
@@ -220,6 +228,7 @@
 				3C392FBC1D0241A70090FA65 /* JSPatch.js in Resources */,
 				3C40C7701D0269D40086B729 /* data.plist in Resources */,
 				3CFB805D1D01683F00646D6A /* Main.storyboard in Resources */,
+				3C35D0511D12A2EE0089D662 /* 1.js in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -233,16 +242,17 @@
 				3CFB80821D016D8100646D6A /* STJPFrameExtension.m in Sources */,
 				3CFB80711D0168DF00646D6A /* HeaderView.m in Sources */,
 				3CFB805A1D01683F00646D6A /* ViewController.m in Sources */,
-				3CFB80831D016D8100646D6A /* STSceneAdPlayer.m in Sources */,
 				3CFB80571D01683F00646D6A /* AppDelegate.m in Sources */,
 				3C392FC21D0244C40090FA65 /* STAnimation.m in Sources */,
+				3C35D0541D12A4DB0089D662 /* STSceneAdPlayer.m in Sources */,
 				3CFB80841D016D8100646D6A /* STTimeMeter.m in Sources */,
 				3CFB80541D01683F00646D6A /* main.m in Sources */,
 				3C392FBF1D0243020090FA65 /* STAnimationService.m in Sources */,
 				3CFB80771D0169D000646D6A /* PlayViewController.m in Sources */,
-				3CFB80811D016D8100646D6A /* STCarSceneAdPlayer.m in Sources */,
 				3C392FBB1D0241A70090FA65 /* JPEngine.m in Sources */,
 				3CFB80871D01706300646D6A /* STUtils.m in Sources */,
+				3C92DCAB1D13F39900B17F8C /* STCarSceneAdPlayer.m in Sources */,
+				3C6DEAD21D2BD9A300B5EE26 /* STJPEngine.m in Sources */,
 				3CFB80741D01699A00646D6A /* ContainerViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

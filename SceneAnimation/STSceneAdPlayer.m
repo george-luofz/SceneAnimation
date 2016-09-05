@@ -12,6 +12,7 @@
 @implementation STSceneAdPlayer {
 }
 - (void)start {
+    NSLog(@"base start");
 }
 - (void)destroy {
 }
@@ -30,7 +31,6 @@
 
 - (void)animationDidStop:(CAAnimation *)anim finished:(BOOL)flag {
 }
-
 - (CGFloat)atan2f:(CGFloat)x y:(CGFloat)y {
     CGFloat d = atan2f(x, y);
     return d;
@@ -41,13 +41,7 @@
 - (CGAffineTransform)CGAffineTransformMakeScale:(CGFloat)x y:(CGFloat)y {
     return CGAffineTransformMakeScale(x, y);
 }
-- (NSString *)kCAFillModeForwards {
-    return kCAFillModeForwards;
-}
 - (CGFloat)PI {
     return M_PI;
-}
-- (NSString *)NSRunLoopCommonModes {
-    return NSRunLoopCommonModes;
 }
 @end

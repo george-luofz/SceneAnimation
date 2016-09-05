@@ -6,7 +6,6 @@
 //  Copyright © 2016年 socialtouch. All rights reserved.
 //
 
-
 #ifndef SceneAdPlayer_h
 #define SceneAdPlayer_h
 #import <UIKit/UIKit.h>
@@ -14,13 +13,14 @@
 #import "STSceneAdCallback.h"
 @interface STSceneAdPlayer : NSObject
 @property(nonatomic, retain, nonnull) id callback;
-@property(nonnull,nonatomic,retain) STTimeMeter *timer;
+@property(nonnull, nonatomic, retain) STTimeMeter *timer;
 - (void)start;
 - (void)destroy;
 - (void)pause;
 - (void)resume;
 - (void)prepareInSubthread;
-- (nullable UIView*)getView;
+- (nullable UIView *)getView;
+- (NSArray *)regeistClasses;
 @end
 
 #endif /* STSceneAdPlayer_h */

@@ -9,6 +9,7 @@
 #import "AppDelegate.h"
 #import "JPEngine.h"
 #import "STJPFrameExtension.h"
+#import "STJPEngine.h"
 @interface AppDelegate ()
 
 @end
@@ -17,9 +18,10 @@
 
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
+    NSLog(@"FILLMODE %@",UIApplicationLaunchOptionsSourceApplicationKey);
     // Override point for customization after application launch.
-    [JPEngine startEngine];
-    [JPEngine addExtensions:@[NSStringFromClass([STJPFrameExtension class])]];
+    [STJPEngine startEngine];
+    [STJPEngine addExtensions:@[NSStringFromClass([STJPFrameExtension class])]];
     return YES;
 }
 

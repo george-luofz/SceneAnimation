@@ -1,6 +1,7 @@
 require('UIView,UIImage,UIImageView,UILabel,UIButton,UIFont,STUtils,UIColor,UIScreen,NSTimer,UITapGestureRecognizer,CABasicAnimation,CAAnimationGroup,NSValue,CAKeyframeAnimation,NSNumber,STTimeMeter,NSMutableDictionary,NSDictionary,NSRunLoop');
 defineClass('STSceneAdPlayer', ['allowStop','curLeftMove','logoBufferView','logoImgLength','containerView','canGetView','dataDict','closeImg','delayCloseTimeInterval','configDict','innerView','bgView','carView','logoView','wheelViewLeft','wheelViewRight','desLabel','closeBtn','bgImgLength','autoClosetimer','logoTap','containerTap'],{
             start: function() {
+            console.log("cos(30)="+Math.cos(30));
             if (self.allowStop()) {
             self.addTapGestureForView_action(self.logoBufferView(), "logoTap");
             self.setCurLeftMove(self.logoImgLength());
@@ -88,7 +89,7 @@ defineClass('STSceneAdPlayer', ['allowStop','curLeftMove','logoBufferView','logo
             var allowStop = self.configDict().objectForKey("clickPopup");
             self.setAllowStop(!allowStop);
             },
-            getResizeValue: function(origineValue) {
+            _getResizeValue: function(origineValue) {
             var screenWidth = UIScreen.mainScreen().bounds().width;
             return origineValue * screenWidth / 414.0;
             },
@@ -103,20 +104,20 @@ defineClass('STSceneAdPlayer', ['allowStop','curLeftMove','logoBufferView','logo
             var wheelImgDict = contentDict.objectForKey('wheelImg');
             var logoImgDict = contentDict.objectForKey('logoImg');
             var bgImgDict = contentDict.objectForKey('backImg');
-            var carImgSize = CGSizeMake(self.getResizeValue(carImgDict.objectForKey('width') / 3),
-                                        self.getResizeValue(carImgDict.objectForKey('height') / 3));
-            var wheelImgSize = CGSizeMake(self.getResizeValue(wheelImgDict.objectForKey('width') / 3),
-                                          self.getResizeValue(wheelImgDict.objectForKey('height') / 3));
-            var logoImgSize = CGSizeMake(self.getResizeValue(logoImgDict.objectForKey('width') / 3),
-                                         self.getResizeValue(logoImgDict.objectForKey('height') / 3));
-            var bgImgSize = CGSizeMake(self.getResizeValue(bgImgDict.objectForKey('width') / 3),
-                                       self.getResizeValue(bgImgDict.objectForKey('height') / 3));
+            var carImgSize = CGSizeMake(self._getResizeValue(carImgDict.objectForKey('width') / 3),
+                                        self._getResizeValue(carImgDict.objectForKey('height') / 3));
+            var wheelImgSize = CGSizeMake(self._getResizeValue(wheelImgDict.objectForKey('width') / 3),
+                                          self._getResizeValue(wheelImgDict.objectForKey('height') / 3));
+            var logoImgSize = CGSizeMake(self._getResizeValue(logoImgDict.objectForKey('width') / 3),
+                                         self._getResizeValue(logoImgDict.objectForKey('height') / 3));
+            var bgImgSize = CGSizeMake(self._getResizeValue(bgImgDict.objectForKey('width') / 3),
+                                       self._getResizeValue(bgImgDict.objectForKey('height') / 3));
             
             var text = contentDict.objectForKey('textWriter');
             var textColor = contentDict.objectForKey('textColor');
-            var xAxis1 = self.getResizeValue(contentDict.objectForKey('xAxis1') / 3);
-            var yAxis1 = self.getResizeValue(contentDict.objectForKey('yAxis1') / 3);
-            var xAxis2 = self.getResizeValue(contentDict.objectForKey('xAxis2') / 3);
+            var xAxis1 = self._getResizeValue(contentDict.objectForKey('xAxis1') / 3);
+            var yAxis1 = self._getResizeValue(contentDict.objectForKey('yAxis1') / 3);
+            var xAxis2 = self._getResizeValue(contentDict.objectForKey('xAxis2') / 3);
             
             var bgImg = bgImgDict.objectForKey("url");
             var carImg = carImgDict.objectForKey("url");
@@ -154,7 +155,7 @@ defineClass('STSceneAdPlayer', ['allowStop','curLeftMove','logoBufferView','logo
             var containerViewY =
             UIScreen.mainScreen().bounds().height * yOffSet;
             var viewHeight =
-            bgImgSize.height + carImgSize.height + wheelByCarY + self.getResizeValue(26);
+            bgImgSize.height + carImgSize.height + wheelByCarY + self._getResizeValue(26);
             var viewWidth = bgImgSize.width + carImgSize.width;
             
             view.setBounds(CGRectMake(0, 0, viewWidth, viewHeight));
@@ -163,10 +164,10 @@ defineClass('STSceneAdPlayer', ['allowStop','curLeftMove','logoBufferView','logo
             self.logoView().setBounds(
                                       CGRectMake(0, 0, logoImgSize.width, logoImgSize.height));
             
-            self.logoView().setCenter(CGPointMake(self.getResizeValue(logoImgSize.width/2+6), self.bgView().center().y));
+            self.logoView().setCenter(CGPointMake(self._getResizeValue(logoImgSize.width/2+6), self.bgView().center().y));
             self.desLabel().setFrame(CGRectMake(
-                                                CGRectGetMaxX(self.logoView().frame()) + self.getResizeValue(3), self.logoView().frame().y,
-                                                bgImgSize.width - logoImgSize.width - self.getResizeValue(3), logoImgSize.height));
+                                                CGRectGetMaxX(self.logoView().frame()) + self._getResizeValue(3), self.logoView().frame().y,
+                                                bgImgSize.width - logoImgSize.width - self._getResizeValue(3), logoImgSize.height));
             
             self.carView().setFrame(CGRectMake(
                                                CGRectGetMaxX(self.bgView().frame()),
@@ -200,7 +201,7 @@ defineClass('STSceneAdPlayer', ['allowStop','curLeftMove','logoBufferView','logo
             view.setFrame(CGRectMake(bgImgSize.width, 0, view.bounds().width,
                                      view.bounds().height));
             containerView.addSubview(self.closeBtn());
-            self.closeBtn().setFrame(CGRectMake(bgImgSize.width - self.getResizeValue(26)-self.getResizeValue(5), 0, self.getResizeValue(26), self.getResizeValue(26)));
+            self.closeBtn().setFrame(CGRectMake(bgImgSize.width - self._getResizeValue(26)-self._getResizeValue(5), 0, self._getResizeValue(26), self._getResizeValue(26)));
             self.setContainerView(containerView);
             self.setLogoBufferView(UIView.alloc().initWithFrame(CGRectMake(self.logoView().frame().x, self.logoView().frame().y - self.logoView().frame().height, self.logoView().frame().width, self.logoView().frame().height * 2)));
             view.addSubview(self.logoBufferView());
@@ -211,7 +212,7 @@ defineClass('STSceneAdPlayer', ['allowStop','curLeftMove','logoBufferView','logo
             self.timer().start();
             self.setAutoClosetimer(NSTimer.timerWithTimeInterval_target_selector_userInfo_repeats(1.0, self, "timerFunc", null, YES));
             self.autoClosetimer().fire();
-            NSRunLoop.currentRunLoop().addTimer_forMode(self.autoClosetimer(), self.NSRunLoopCommonModes());
+            NSRunLoop.currentRunLoop().addTimer_forMode(self.autoClosetimer(),"kCFRunLoopCommonModes");
             },
             timerFunc: function() {
             if (self.timer().getTotal() >= self.delayCloseTimeInterval()) {
@@ -278,7 +279,7 @@ defineClass('STSceneAdPlayer', ['allowStop','curLeftMove','logoBufferView','logo
             animation.setDelegate(delegate);
             if (!removed) {
             animation.setRemovedOnCompletion(NO);
-            animation.setFillMode(self.kCAFillModeForwards());
+            animation.setFillMode("forwards");
             }
             animation.setValue_forKey(key, key);
             return animation;
@@ -292,7 +293,7 @@ defineClass('STSceneAdPlayer', ['allowStop','curLeftMove','logoBufferView','logo
             group.setDuration(duration);
             if (!removed) {
             group.setRemovedOnCompletion(NO);
-            group.setFillMode(self.kCAFillModeForwards());
+            group.setFillMode("forwards");
             }
             group.setDelegate(delegate);
             group.setValue_forKey(key, key);
@@ -308,14 +309,14 @@ defineClass('STSceneAdPlayer', ['allowStop','curLeftMove','logoBufferView','logo
             self.changeMoveFrame_length(self.innerView(), self.bgImgLength());
             }
             self.setCurLeftMove(self.bgImgLength());
-            self.startCarAnimation(self.bgImgLength() + self.getResizeValue(12));
+            self.startCarAnimation(self.bgImgLength() + self._getResizeValue(12));
             } else if (anim.valueForKey("car")) {
-            self.changeMoveFrame_length(self.carView(), self.bgImgLength() + self.getResizeValue(12));
+            self.changeMoveFrame_length(self.carView(), self.bgImgLength() + self._getResizeValue(12));
             self.startCarStopAnimation();
             } else if (anim.valueForKey("wheelLeft")) {
-            self.changeMoveFrame_length(self.wheelViewLeft(), self.bgImgLength() + self.getResizeValue(12));
+            self.changeMoveFrame_length(self.wheelViewLeft(), self.bgImgLength() + self._getResizeValue(12));
             } else if (anim.valueForKey("wheelRight")) {
-            self.changeMoveFrame_length(self.wheelViewRight(), self.bgImgLength() + self.getResizeValue(12));
+            self.changeMoveFrame_length(self.wheelViewRight(), self.bgImgLength() + self._getResizeValue(12));
             } else if (anim.valueForKey("logoView")) {
             self.changeMoveFrame_length(self.innerView(), self.logoImgLength());
             self.autoClose();
@@ -381,7 +382,7 @@ defineClass('STSceneAdPlayer', ['allowStop','curLeftMove','logoBufferView','logo
             animation.setAutoreverses(NO);
             animation.setDelegate(self);
             animation.setRemovedOnCompletion(NO);
-            animation.setFillMode(self.kCAFillModeForwards());
+            animation.setFillMode("forwards");
             animation.setDuration(1.5);
             animation.setValue_forKey("car", "car");
             self.carView().layer().addAnimation_forKey(animation, "car");
@@ -402,8 +403,8 @@ defineClass('STSceneAdPlayer', ['allowStop','curLeftMove','logoBufferView','logo
             var originX = view.layer().position().x;
             var originY = view.layer().position().y;
             var value1 = NSValue.valueWithCGPoint(CGPointMake(originX, originY));
-            var value2 = NSValue.valueWithCGPoint(CGPointMake(originX, originY + self.getResizeValue(2.5)));
-            var value3 = NSValue.valueWithCGPoint(CGPointMake(originX, originY - self.getResizeValue(2.5)));
+            var value2 = NSValue.valueWithCGPoint(CGPointMake(originX, originY + self._getResizeValue(2.5)));
+            var value3 = NSValue.valueWithCGPoint(CGPointMake(originX, originY - self._getResizeValue(2.5)));
             var value4 = NSValue.valueWithCGPoint(CGPointMake(originX, originY));
             var values = [value1, value2, value3, value4];
             return values;
@@ -428,7 +429,7 @@ defineClass('STSceneAdPlayer', ['allowStop','curLeftMove','logoBufferView','logo
             animation.setAutoreverses(reverse);
             if (!removed) {
             animation.setRemovedOnCompletion(NO);
-            animation.setFillMode(self.kCAFillModeForwards());
+            animation.setFillMode("forwards");
             }
             animation.setDelegate(delegate);
             animation.setValue_forKey(key, key);
